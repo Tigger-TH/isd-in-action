@@ -33,7 +33,8 @@ public class CartController {
     public String removeTaco(
         @RequestParam("index") int index,
         @ModelAttribute ("tacoOrder") TacoOrder tacoOrder) {
-        log.info("Remove taco at index {}. Remaining: {}",index, tacoOrder.getTacos().size());
+        tacoOrder.removeTaco(index);
+        log.info("Removed taco at index {}. Remaining: {}", index, tacoOrder.getTacos().size());
         return "redirect:/cart";
     }
     
