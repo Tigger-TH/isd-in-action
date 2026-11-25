@@ -25,4 +25,9 @@ public class Ingredient {
     WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE, DRINK
   }
 
+  // ใน src/main/java/tacos/Ingredient.java
+  public Ingredient(String id, String name, Type type) {
+      this(id, name, type, BigDecimal.ZERO);
+  }
+
 }
